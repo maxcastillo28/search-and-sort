@@ -16,10 +16,10 @@ public class Selection
      */
     public static int[] sort(int[] arr) {
         int least = arr[0];
-        int temp;
         int pos = 0;
         for (int i = 0; i < arr.length; i++){
             least = arr[i];
+            pos = i;
             for (int j = i; j < arr.length; j++){
                 
                 if (arr[j] < least){
@@ -27,8 +27,8 @@ public class Selection
                     pos = j;
                 }
             }
-            temp = least;
-            arr[i] = arr[pos];
+            int temp = arr[i];
+            arr[i] = least;
             arr[pos] = temp;
         }
         return arr;

@@ -19,9 +19,9 @@ public class Insertion
         for (int i = 1; i< arr.length; i++){
             if (arr[i] < arr[i-1]){
                 int j = i;
-                while (arr[j] < arr[j-1]){
+                while (j!=0 && arr[j] < arr[j-1]){
                     temp = arr[j-1];
-                    arr[i-1] = arr[j];
+                    arr[j-1] = arr[j];
                     arr[j] = temp;
                     j--;
                 }
